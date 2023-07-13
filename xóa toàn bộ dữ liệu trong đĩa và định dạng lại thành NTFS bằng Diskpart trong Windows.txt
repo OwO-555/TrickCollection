@@ -1,0 +1,21 @@
+Để xóa toàn bộ dữ liệu trong đĩa và định dạng lại thành NTFS bằng Diskpart trong Windows, bạn có thể làm theo các bước sau:
+
+**LƯU Ý: Thực hiện các bước dưới đây sẽ xóa toàn bộ dữ liệu trên đĩa. Hãy đảm bảo sao lưu tất cả các dữ liệu quan trọng trước khi tiếp tục.**
+
+1. Mở Command Prompt bằng cách nhấn tổ hợp phím `Win + R`, gõ `cmd`, sau đó nhấn Enter.
+
+2. Gõ `diskpart` và nhấn Enter để mở diskpart.
+
+3. Gõ `list disk` để hiển thị danh sách các ổ đĩa có sẵn trên hệ thống. Xác định đĩa mà bạn muốn xóa và định dạng lại.
+
+4. Gõ `select disk X` (thay X bằng số đĩa bạn muốn xóa và định dạng lại) và nhấn Enter để chọn đĩa.
+
+5. Gõ `clean` và nhấn Enter. Lệnh này sẽ xóa toàn bộ dữ liệu trên đĩa đã chọn.
+
+6. Sau khi lệnh clean hoàn thành, gõ `create partition primary` và nhấn Enter để tạo một phân vùng chính trên đĩa.
+
+7. Gõ `format fs=ntfs quick` và nhấn Enter để định dạng phân vùng thành NTFS. Tùy chọn `quick` sẽ thực hiện định dạng nhanh chóng.
+
+8. Sau khi quá trình định dạng hoàn tất, bạn có thể đóng diskpart bằng cách gõ `exit` và nhấn Enter.
+
+Sau các bước trên, đĩa sẽ được xóa toàn bộ dữ liệu và định dạng lại thành NTFS bằng Diskpart trong Windows.
